@@ -1,0 +1,609 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Zero">
+  <meta name="keywords" content="">
+  <title>对初学者友好的Git和Github使用指南之介绍和安装篇 - Zero&#39;s Planet</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>ℤ𝕖𝕣𝕠'𝕤 ℙ𝕝𝕒𝕟𝕖𝕥</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                Links
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/article/a2-2.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="对初学者友好的Git和Github使用指南之介绍和安装篇">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-12-26 00:00" pubdate>
+        December 26, 2020 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      18
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">对初学者友好的Git和Github使用指南之介绍和安装篇</h1>
+            
+            <div class="markdown-body">
+              <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文将初步介绍Github和Git是什么，以及介绍如何注册Github和安装Git。这也是搭建博客的前期准备工作。<code>Use it. They are just tools.</code></p>
+<h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h3><p>GitHub是一个值得你探索的宝藏网站，它已经不再是开发人员的专属，不需要掌握任何代码知识，你也可以玩转它，本文会用我们熟悉的网站和工具进行类比来逐渐解锁GitHub这个神奇的网站。</p>
+<h4 id="GitHub是什么"><a href="#GitHub是什么" class="headerlink" title="GitHub是什么"></a><strong>GitHub是什么</strong></h4><blockquote>
+<p>GitHub是通过Git进行版本控制的软件源代码托管服务平台。<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://zh.wikipedia.org/wiki/GitHub
+">[1]</span></a></sup></p>
+</blockquote>
+<p>最质朴的解释：GitHub是存放代码的地方，若将代码公开则可以被全世界的人看到。<br>在浏览器中打开[GitHub]<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://github.com/
+">[2]</span></a></sup>，可以看到首页中介绍了这是全世界构建软件的地方。简而言之：涉及到代码就上GitHub。就像买东西上淘宝，找资源上百度网盘。<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226104853.png" srcset="/img/loading.gif" alt="GitHub首页图片样例"></p>
+<p>上面对GitHub的解释都是关于代码方面的，但在今天只要你有想在网络上被其他人看见的内容都可以在上面发布。就像曾经受众多为二次元的平台[哔哩哔哩]<sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.bilibili.com/
+">[3]</span></a></sup>，今天却经常被称为b站大学。看看GitHub上除代码之外还有什么：</p>
+<ul>
+<li><p>学习资源：在输入框中输入<code>awesome</code>，你将收获丰富的学习资源（目前多为编程相关，所以对其他专业来说这还有很大可填补的空间）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226131616.png" srcset="/img/loading.gif" alt="awesome图片样例"><br>点开<code>See topic</code>，（类似于微博里的超话）里面都是关于这个话题的内容：<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226133540.png" srcset="/img/loading.gif" alt="github-topic图片样例"><br>点开第一个awesome合集（从学习资料到电子书到找工作到娱乐都给安排得妥妥的）：<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226131648.png" srcset="/img/loading.gif" alt="awesome合集图片样例"><br>[Github中文社区精选了优质的awesome资源]<sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.githubs.cn/awesome
+">[4]</span></a></sup></p>
+</li>
+<li><p>奇奇怪怪的东西：</p>
+<ul>
+<li><p>曾经在八卦圈流传颇广又屡次被删的421页PDF<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226132310.png" srcset="/img/loading.gif" alt="421八卦搜索图片样例"></p>
+</li>
+<li><p>最全中文诗歌古典文集数据库<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226184422.png" srcset="/img/loading.gif" alt="中文诗歌数据库搜索图"></p>
+</li>
+<li><p>通过输入感兴趣的关键词进行自行探索，中文、英文都可以试试，解锁更多精彩。<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226184012.png" srcset="/img/loading.gif" alt="GitHub搜索示例图"></p>
+</li>
+</ul>
+</li>
+<li><p>热门话题、趋势（类似于微博中的热搜）<br>点击首页中的<code>Explore</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226134326.png" srcset="/img/loading.gif" alt="GitHub趋势图片样例"><br>[GitHub中文社区同样也有热门趋势栏目]<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://www.githubs.cn/trending
+">[5]</span></a></sup></p>
+</li>
+</ul>
+<br>
+&diams; 以上这些功能都不需要注册就可以搜索。但若想解锁更多功能还得从拥有一个账户开始。本文主要是为搭建博客做准备，更多功能将结合日后使用进行介绍。
+* 不得不提的GitHub Pages服务：通过GitHub Pages可以免费搭建博客，其他用户通过在浏览器中输入`username.github.io`访问该博客。
+>GitHub提供了一个叫做GitHub Pages的功能，可以免费把你的静态网页托管在Github上。
+>GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 HTML、CSS 和 JavaScript 文件，（可选）通过构建过程运行文件，然后发布网站。<sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages
+">[6]</span></a></sup>
+
+<h4 id="注册GitHub账户"><a href="#注册GitHub账户" class="headerlink" title="注册GitHub账户"></a>注册GitHub账户</h4><ol>
+<li>进入[Github网站]<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://github.com/
+">[2]</span></a></sup>，点击首页的<code>Sign up</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226142411.png" srcset="/img/loading.gif" alt="Github注册图片样例"></li>
+<li>根据官方指引进行操作<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226143153.png" srcset="/img/loading.gif" alt="Github注册流程图片样例"></li>
+<li>首次登录后会出现下面这张图，<strong>不需要任何代码知识就能学习Git和GitHub</strong>（此图是以前的，可能现在有不同）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/Image.png" srcset="/img/loading.gif" alt="Github登录页面图片样例"></li>
+</ol>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>不使用Git的GitHub更像是一个资源库，更强大的功能需要通过Git来实现。</p>
+<h4 id="Git是什么"><a href="#Git是什么" class="headerlink" title="Git是什么"></a>Git是什么</h4><ul>
+<li>Git是一个分布式版本控制系统，对用户上传到Github上的内容（文档或代码等）进行版本控制。<ul>
+<li>分布式：目前我还解释不清。总之，就是好。</li>
+<li>版本控制：相信大家在编写文档时都出现过不断修改文档并重新保存，如果想查看以前的文档必须在之前就将其保存，若没有保存下来就无法查看以前的文档。但这个操作可以通过Git轻松实现，想回到哪个版本就回到哪个版本，再次回到最新版本也是一条命令的事。总之，优秀。当然它还有其他操作。<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226171803.png" srcset="/img/loading.gif" alt="20201226171803"></li>
+</ul>
+</li>
+</ul>
+<h4 id="安装Git（本文是在windows操作系统下）"><a href="#安装Git（本文是在windows操作系统下）" class="headerlink" title="安装Git（本文是在windows操作系统下）"></a>安装Git（本文是在windows操作系统下）</h4><ol>
+<li>下载安装包</li>
+</ol>
+<ul>
+<li>在[Git官网]<sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://git-scm.com/downloads
+">[7]</span></a></sup>下载安装包<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164520.png" srcset="/img/loading.gif" alt="Git官网下载图"></li>
+<li>若官网下载速度太慢，选择[国内下载地址]<sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://npm.taobao.org/mirrors/git-for-windows/
+">[8]</span></a></sup><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164711.png" srcset="/img/loading.gif" alt="Git国内下载图"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164935.png" srcset="/img/loading.gif" alt="20201226164935"></li>
+</ul>
+<ol start="2">
+<li>安装过程<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165314.png" srcset="/img/loading.gif" alt="Git安装过程图"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165339.png" srcset="/img/loading.gif" alt="Git安装过程图2"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165417.png" srcset="/img/loading.gif" alt="Git安装过程图3"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165448.png" srcset="/img/loading.gif" alt="Git安装过程图4"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165559.png" srcset="/img/loading.gif" alt="Git安装过程图5"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165634.png" srcset="/img/loading.gif" alt="Git安装过程图6"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165708.png" srcset="/img/loading.gif" alt="Git安装过程图7"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165743.png" srcset="/img/loading.gif" alt="Git安装过程图8"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165817.png" srcset="/img/loading.gif" alt="Git安装过程图9"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226165841.png" srcset="/img/loading.gif" alt="Git安装过程图10"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226170024.png" srcset="/img/loading.gif" alt="Git安装过程图11"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226170056.png" srcset="/img/loading.gif" alt="Git安装过程图12"></li>
+</ol>
+<ul>
+<li>生成桌面快捷方式<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226200115.png" srcset="/img/loading.gif" alt="20201226200115"></li>
+</ul>
+<ol start="3">
+<li>检测是否安装成功</li>
+</ol>
+<ul>
+<li><p>在电脑桌面鼠标右击，选择<code>Git Bash Here</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226170804.png" srcset="/img/loading.gif" alt="GitBash图"></p>
+</li>
+<li><p>在出现的命令行界面（输入命令的地方）中输入<code>git --version</code>，并回车可查看安装的版本号，即为安装成功<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226171016.png" srcset="/img/loading.gif" alt="Git安装成功图"></p>
+</li>
+<li><p>（可选）修改Git Bash打开后的默认路径，可以改成经常写代码的文件夹<br>鼠标右击Git Bash快捷方式，点击“属性”<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226200446.png" srcset="/img/loading.gif" alt="20201226200446"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226200536.png" srcset="/img/loading.gif" alt="20201226200536"></p>
+</li>
+</ul>
+<ol start="4">
+<li>配置SSH Key</li>
+</ol>
+<ul>
+<li><p>在电脑桌面鼠标右击，选择<code>Git Bash Here</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226170804.png" srcset="/img/loading.gif" alt="GitBash图"></p>
+</li>
+<li><p>在命令行中输入<code>cd ~/.ssh/</code>，回车<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226191842.png" srcset="/img/loading.gif" alt="创建sshkey图片1"></p>
+</li>
+<li><p>若显示<code>No such file or directory</code>，则创建一个，在命令行中输入<code>mkdir ~/.ssh</code>，回车<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226192010.png" srcset="/img/loading.gif" alt="创建sshkey图片2"></p>
+</li>
+<li><p>配置全局的name和email，在命令行分别输入<code>git config --global username(你注册GitHub时的用户名)</code> <code>git config --global useremail(你注册GitHub时的邮箱)</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226192237.png" srcset="/img/loading.gif" alt="创建sshkey图片3"></p>
+</li>
+<li><p>生成SSH Key，在命令行中输入<code>ssh-keygen -t rsa -C useremail(你注册GitHub时的邮箱)</code>，完成后在本地会得到两个文件（命令行中会显示存放在哪里）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226192836.png" srcset="/img/loading.gif" alt="创建sshkey图片4"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226193427.png" srcset="/img/loading.gif" alt="创建sshkey图片5"></p>
+</li>
+<li><p>在GitHub上添加SSH Key</p>
+<ul>
+<li>用记事本打开<code>id_rsa.pub</code>文件，将里面的内容全部复制</li>
+<li>点击GitHub个人头像，点击<code>Settings</code> –&gt; <code>SSH and GPG keys</code> –&gt; <code>New SSh key</code>，将上一步复制的内容全部粘贴<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226194734.png" srcset="/img/loading.gif" alt="创建sshkey图片6"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226194522.png" srcset="/img/loading.gif" alt="创建sshkey图片7"></li>
+<li>查看是否添加成功，在命令行中输入<code>ssh git@github.com</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226195013.png" srcset="/img/loading.gif" alt="20201226195013"></li>
+</ul>
+</li>
+</ul>
+<h3 id="Git和Github的关系"><a href="#Git和Github的关系" class="headerlink" title="Git和Github的关系"></a>Git和Github的关系</h3><p>这时候可以用我们熟悉的百度云网盘来举例。从图中可以看出人通过手动对百度云网盘进行操作，而通过Git可以实现只需要输入命令就能完成对Github的操作，并且实现的功能更多。<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226183132.png" srcset="/img/loading.gif" alt="Git和GitHub关系图"></p>
+<br>
+&diams; 至此，搭建博客的准备工作已经完成。关于Github和Git还有不少可以介绍的地方，日后再通过实践学习，边学边用，记得更牢。
+
+
+<h3 id="更多学习资料"><a href="#更多学习资料" class="headerlink" title="更多学习资料"></a>更多学习资料</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.githubs.cn/post/git-tutorial">GitHub中文社区汇总的优质Git和GitHub教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://guides.github.com/">GitHub官方指南</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.blog/2018-04-19-introducing-github-learning-lab/">GitHub官方教学</a><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226175413.png" srcset="/img/loading.gif" alt="GitHub官方教学图"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201225215610.png" srcset="/img/loading.gif" alt="GitHub官方教学图2"><br>
+
+</li>
+</ul>
+<p>&diams; 若有任何问题欢迎在评论区留言或者在<a target="_blank" rel="noopener" href="https://github.com/momoknight/momoknight.github.io/issues">Github上我的博客仓库的Issues版块</a>中留言。（Issues相当于论坛的讨论版块，提出的问题任何人都可以看见）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226185527.png" srcset="/img/loading.gif" alt="Issues图片"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226185609.png" srcset="/img/loading.gif" alt="Issues图片2"><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GitHub">https://zh.wikipedia.org/wiki/GitHub</a><br><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a><br><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a><br><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.bilibili.com/">https://www.bilibili.com/</a><br><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.githubs.cn/awesome">https://www.githubs.cn/awesome</a><br><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.githubs.cn/trending">https://www.githubs.cn/trending</a><br><a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages">https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages</a><br><a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br><a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:8" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">https://npm.taobao.org/mirrors/git-for-windows/</a><br><a href="#fnref:8" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+<!--打赏-->
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div class="funText">Have fun</div>
+  <button id = "rewardButton" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>赏</span></button>
+  <div id="QR" style="display: none;">
+    <div id="wechat" style="display: inline-block;">
+    <img id="wechat_qr" src="/img/weixin.jpg" srcset="/img/loading.gif" alt="Zero's Planet"/><p>Wechat Pay</p><p>感谢您的支持</p>
+  </div>
+  </div>
+  
+</div>
+ <!--打赏-->
+
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/20/hello_world/">
+                        <span class="hidden-mobile">More About Zero's Planet</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "aymy2O6xPwtIezzk6BjlHFEj-gzGzoHsz",
+          app_key: "lBb14KftQG2DLMKx9WY9qohE",
+          placeholder: "来玩呀~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "https://aymy2o6x.lc-cn-n1-shared.com",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Zero</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

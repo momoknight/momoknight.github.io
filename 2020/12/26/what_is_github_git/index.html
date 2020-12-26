@@ -17,9 +17,25 @@
   <meta name="description" content="">
   <meta name="author" content="Zero">
   <meta name="keywords" content="">
-  <title>Tags - Zero&#39;s Planet</title>
+  <title>对初学者友好的Git和Github使用指南之介绍和安装篇 - Zero&#39;s Planet</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -47,7 +63,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -153,14 +169,51 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/bg/bg.png') no-repeat center center;
+         style="background: url('/img/article/a1.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Tag">
+            <span class="h2" id="subtitle" title="对初学者友好的Git和Github使用指南之介绍和安装篇">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-12-26 00:00" pubdate>
+        December 26, 2020 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      241 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      2
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -173,24 +226,133 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center tagcloud">
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">对初学者友好的Git和Github使用指南之介绍和安装篇</h1>
+            
+            <div class="markdown-body">
+              <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Github是一个值得你探索的宝藏网站，它已经不再是开发人员的专属，不需要掌握任何代码知识，你也可以玩转它，愿你早日解锁。</p>
+<h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><ul>
+<li>Github是什么<blockquote>
+<p>GitHub是通过Git进行版本控制的软件源代码托管服务平台。<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://zh.wikipedia.org/wiki/GitHub
+">[1]</span></a></sup></p>
+</blockquote>
+</li>
+</ul>
+<p>最质朴的解释：Github是存放代码的地方，若将代码公开则可以被全世界的人看到。<br>在浏览器中打开[Github]<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://github.com/
+">[2]</span></a></sup>，可以看到首页中介绍了这是全世界构建软件的地方。简而言之：写代码就上Github。就像买东西上淘宝，找资源上百度网盘。接下来会用我们熟悉的网站和工具进行类比来逐渐解锁Github这个神奇的网站。<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226104853.png" srcset="/img/loading.gif" alt="Github首页"></p>
+<p>上面对Github的解释都是关于代码方面的，但在今天</p>
+<p><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201225215610.png" srcset="/img/loading.gif" alt="20201225215610"></p>
+<ul>
+<li>Git：分布式版本控制系统</li>
+</ul>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GitHub">https://zh.wikipedia.org/wiki/GitHub</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+<!--打赏-->
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div class="funText">Have fun</div>
+  <button id = "rewardButton" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>赏</span></button>
+  <div id="QR" style="display: none;">
+    <div id="wechat" style="display: inline-block;">
+    <img id="wechat_qr" src="/img/weixin.jpg" srcset="/img/loading.gif" alt="Zero's Planet"/><p>Wechat Pay</p><p>感谢您的支持</p>
+  </div>
+  </div>
   
 </div>
+ <!--打赏-->
 
-              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/20/hello_world/">
+                        <span class="hidden-mobile">More About Zero's Planet</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
-          </div>
+
+            
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "aymy2O6xPwtIezzk6BjlHFEj-gzGzoHsz",
+          app_key: "lBb14KftQG2DLMKx9WY9qohE",
+          placeholder: "来玩呀~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "https://aymy2o6x.lc-cn-n1-shared.com",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -273,9 +435,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 

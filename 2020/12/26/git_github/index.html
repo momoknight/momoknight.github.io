@@ -61,6 +61,7 @@
   <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 5.3.0"></head>
 
+<script src="https://cdn.jsdelivr.net/gh/bobcn/hexo_resize_image.js@master/hexo_resize_image.js"></script>
 
 <body>
   <header style="height: 70vh;">
@@ -206,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      17
+      18
        分钟
     </span>
   
@@ -296,7 +297,7 @@
 <h4 id="注册GitHub账户"><a href="#注册GitHub账户" class="headerlink" title="注册GitHub账户"></a>注册GitHub账户</h4><ol>
 <li><p>进入<a target="_blank" rel="noopener" href="https://github.com/">Github</a>网站，点击首页的<code>Sign up</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226142411.png" srcset="/img/loading.gif"></p>
 </li>
-<li><p>根据官方指引进行操作<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226143153.png" srcset="/img/loading.gif"></p>
+<li><p>根据官方指引进行操作<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226143153.png?80" srcset="/img/loading.gif"></p>
 </li>
 <li><p>首次登录后会出现下面这张图，<strong>不需要任何代码知识就能学习Git和GitHub</strong>（此图是以前的，现在可能有不同）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/Image.png" srcset="/img/loading.gif"></p>
 </li>
@@ -317,14 +318,15 @@
 <ul>
 <li><p>在<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git官网</a>下载安装包<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164520.png" srcset="/img/loading.gif"></p>
 </li>
-<li><p>若官网下载速度太慢，选择<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">国内下载地址</a><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164711.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164935.png" srcset="/img/loading.gif"></p>
+<li><p>若官网下载速度太慢，选择<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">国内下载地址</a></p>
+<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164711.png" srcset="/img/loading.gif"></div><div class="group-image-wrap"><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164935.png" srcset="/img/loading.gif"></div></div></div>
 </li>
 </ul>
 <ol start="2">
 <li>安装过程<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227121219.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227121319.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227121410.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227121542.png" srcset="/img/loading.gif"></li>
 </ol>
 <ul>
-<li>生成桌面快捷方式<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226200115.png" srcset="/img/loading.gif"></li>
+<li>生成桌面快捷方式<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226200115.png?80" srcset="/img/loading.gif"></li>
 </ul>
 <ol start="3">
 <li>检测是否安装成功</li>
@@ -354,16 +356,16 @@
 <li><p>在GitHub上添加SSH Key</p>
 <ul>
 <li>用记事本打开<code>id_rsa.pub</code>文件，将里面的内容全部复制</li>
-<li>点击GitHub个人头像，点击<code>Settings</code> –&gt; <code>SSH and GPG keys</code> –&gt; <code>New SSh key</code>，将上一步复制的内容全部粘贴<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226194734.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226194522.png" srcset="/img/loading.gif"></li>
+<li>点击GitHub个人头像，点击<code>Settings</code> –&gt; <code>SSH and GPG keys</code> –&gt; <code>New SSh key</code>，将上一步复制的内容全部粘贴<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226194734.png" srcset="/img/loading.gif"></div><div class="group-image-wrap"><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226194522.png" srcset="/img/loading.gif"></div></div></div></li>
 <li>查看是否添加成功，在命令行中输入<code>ssh git@github.com</code>，显示如下即为安装成功<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226195013.png" srcset="/img/loading.gif"></li>
 </ul>
 </li>
 </ul>
 <br>
 
-<h3 id="Git和Github的关系"><a href="#Git和Github的关系" class="headerlink" title="Git和Github的关系"></a>Git和Github的关系</h3><p>这时候可以用我们熟悉的百度云网盘来举例。从图中可以看出人通过手动对百度云网盘进行操作，而通过Git可以实现只需要输入命令就能完成对Github的操作，并且实现的功能更多。<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226183132.png" srcset="/img/loading.gif"></p>
+<h3 id="Git和Github的关系"><a href="#Git和Github的关系" class="headerlink" title="Git和Github的关系"></a>Git和Github的关系</h3><p>这时候可以用我们熟悉的百度云网盘来举例。从图中可以看出人通过手动对百度云网盘进行操作，而通过Git可以实现只需要输入命令就能完成对Github的操作，并且实现的功能更多。<br>&lt;img src=”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226183132.png&quot;">https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226183132.png&quot;</a> width=”50%” height=”50%&gt;</p>
 <br>
-&diams; 至此，搭建博客的准备工作已经完成。关于Github和Git还有不少可以介绍的地方，日后再通过实践学习，边学边用，记得更牢。
+&diams; 至此，搭建博客的准备工作已经完成。关于Github和Git还有不少可以介绍的地方，日后再通过实践学习，**边学边用，记得更牢**。
 
 
 <h3 id="更多学习资料"><a href="#更多学习资料" class="headerlink" title="更多学习资料"></a>更多学习资料</h3><ul>
@@ -376,14 +378,10 @@
 
 </li>
 </ul>
-<p>&diams; 若有任何问题欢迎在评论区留言或者在<a target="_blank" rel="noopener" href="https://github.com/momoknight/momoknight.github.io/issues">Github上我的博客仓库的Issues版块</a>中留言。（Issues相当于论坛的讨论版块，提出的问题任何人都可以看见）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227133246.png" srcset="/img/loading.gif"></p>
-<!-- ![](https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226185527.png)
-![](https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226185609.png) -->
-
-<br>
-<br>
-
-<p>References<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GitHub">https://zh.wikipedia.org/wiki/GitHub</a><br><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages">https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages</a><br><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></p>
+<p>&diams; 若有任何问题欢迎在评论区留言或者在<a target="_blank" rel="noopener" href="https://github.com/momoknight/momoknight.github.io/issues">Github上我的博客仓库的Issues版块</a>中留言。（Issues相当于论坛的讨论版块，提出的问题任何人都可以看见）</p>
+<!-- ![](https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227133246.png) -->
+<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226185527.png" srcset="/img/loading.gif"></div><div class="group-image-wrap"><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226185609.png" srcset="/img/loading.gif"></div></div></div><section class="footnotes"><h2>Reference</h2><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GitHub">https://zh.wikipedia.org/wiki/GitHub</a>
+<p><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages">https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages</a><br><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></p>
 
             </div>
             <hr>

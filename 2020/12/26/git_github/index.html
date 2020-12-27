@@ -55,7 +55,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":60,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -239,12 +239,10 @@
             <h1 style="display: none">对初学者友好的Git和Github使用指南之介绍和安装篇</h1>
             
             <div class="markdown-body">
-              <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><hr>
-<p>本文将初步介绍Github和Git是什么，以及介绍如何注册Github和安装Git。这也是搭建博客的前期准备工作。<code>Use it. They are just tools.</code></p>
+              <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文将初步介绍Github和Git是什么，以及介绍如何注册Github和安装Git。这也是搭建博客的前期准备工作。<code>Use it. They are just tools.</code></p>
 <a id="more"></a> 
 
-<h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h3><hr>
-<p>GitHub是一个值得你探索的宝藏网站，它已经不再是开发人员的专属，无需掌握任何代码知识，你也可以玩转它。本文会用我们熟悉的网站和工具进行类比来逐渐解锁GitHub这个神奇的网站。</p>
+<h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h3><p>GitHub是一个值得你探索的宝藏网站，它已经不再是开发人员的专属，无需掌握任何代码知识，你也可以玩转它。本文会用我们熟悉的网站和工具进行类比来逐渐解锁GitHub这个神奇的网站。</p>
 <h4 id="GitHub是什么"><a href="#GitHub是什么" class="headerlink" title="GitHub是什么"></a><strong>GitHub是什么</strong></h4><blockquote>
 <p>GitHub是通过Git进行版本控制的软件源代码托管服务平台。<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://zh.wikipedia.org/wiki/GitHub
 ">[1]</span></a></sup></p>
@@ -252,9 +250,12 @@
 <p>最质朴的解释：GitHub是存放代码的地方，若将代码公开则可以被全世界的人看到。<br>在浏览器中打开<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>，可以看到首页中介绍了这是全世界构建软件的地方。简而言之：涉及到代码就上GitHub。就像买东西上淘宝，找资源上百度网盘。<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226104853.png" srcset="/img/loading.gif"></p>
 <p>上面对GitHub的解释都是关于代码方面的，但在今天只要你有想在网络上被其他人看见的内容都可以在上面发布。就像曾经受众多为二次元的平台<a target="_blank" rel="noopener" href="https://www.bilibili.com/">哔哩哔哩</a>，今天却经常被称为b站大学。看看GitHub上除代码之外还有什么：</p>
 <ul>
-<li>学习资源，在输入框中输入<code>awesome</code>，你将收获丰富的学习资源（目前多为编程相关，所以对其他专业来说这还有很大可填补的空间）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226131616.png" srcset="/img/loading.gif"><ul>
-<li>点开<code>See topic</code>（类似于微博里的超话），里面都是关于这个话题的内容<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226133540.png" srcset="/img/loading.gif"></li>
-<li>点开第一个awesome合集（从学习资料到电子书到找工作到娱乐都给安排得妥妥的）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226131648.png" srcset="/img/loading.gif"></li>
+<li><p>学习资源，在输入框中输入<code>awesome</code>，你将收获丰富的学习资源（目前多为编程相关，所以对其他专业来说这还有很大可填补的空间）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226131616.png" srcset="/img/loading.gif"></p>
+<ul>
+<li><p>点开<code>See topic</code>（类似于微博里的超话），里面都是关于这个话题的内容<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226133540.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>点开第一个awesome合集（从学习资料到电子书到找工作到娱乐都给安排得妥妥的）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226131648.png" srcset="/img/loading.gif"></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -286,14 +287,16 @@
 </li>
 </ul>
 <h4 id="注册GitHub账户"><a href="#注册GitHub账户" class="headerlink" title="注册GitHub账户"></a>注册GitHub账户</h4><ol>
-<li>进入<a target="_blank" rel="noopener" href="https://github.com/">Github</a>网站，点击首页的<code>Sign up</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226142411.png" srcset="/img/loading.gif"></li>
-<li>根据官方指引进行操作<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226143153.png" srcset="/img/loading.gif"></li>
-<li>首次登录后会出现下面这张图，<strong>不需要任何代码知识就能学习Git和GitHub</strong>（此图是以前的，现在可能有不同）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/Image.png" srcset="/img/loading.gif"></li>
+<li><p>进入<a target="_blank" rel="noopener" href="https://github.com/">Github</a>网站，点击首页的<code>Sign up</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226142411.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>根据官方指引进行操作<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226143153.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>首次登录后会出现下面这张图，<strong>不需要任何代码知识就能学习Git和GitHub</strong>（此图是以前的，现在可能有不同）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/Image.png" srcset="/img/loading.gif"></p>
+</li>
 </ol>
 <br>
 
-<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><hr>
-<p>不使用Git的GitHub更像是一个资源库，更强大的功能需要通过Git来实现。</p>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>不使用Git的GitHub更像是一个资源库，更强大的功能需要通过Git来实现。</p>
 <h4 id="Git是什么"><a href="#Git是什么" class="headerlink" title="Git是什么"></a>Git是什么</h4><ul>
 <li>Git是一个分布式版本控制系统，对用户上传到Github上的内容进行版本控制。<ul>
 <li>分布式：目前我还解释不清。总之，就是好。</li>
@@ -305,8 +308,10 @@
 <li>下载安装包</li>
 </ol>
 <ul>
-<li>在<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git官网</a>下载安装包<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164520.png" srcset="/img/loading.gif"></li>
-<li>若官网下载速度太慢，选择<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">国内下载地址</a><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164711.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164935.png" srcset="/img/loading.gif"></li>
+<li><p>在<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git官网</a>下载安装包<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164520.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>若官网下载速度太慢，选择<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">国内下载地址</a><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164711.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226164935.png" srcset="/img/loading.gif"></p>
+</li>
 </ul>
 <ol start="2">
 <li>安装过程<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227121219.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227121319.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227121410.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227121542.png" srcset="/img/loading.gif"></li>
@@ -318,20 +323,29 @@
 <li>检测是否安装成功</li>
 </ol>
 <ul>
-<li>在电脑桌面鼠标右击，选择<code>Git Bash Here</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226170804.png" srcset="/img/loading.gif"></li>
-<li>在出现的命令行界面中输入<code>git --version</code>，回车可查看安装的版本号，即为安装成功<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227122239.png" srcset="/img/loading.gif"></li>
-<li>[可选]修改Git Bash打开时的默认路径。鼠标右击Git Bash快捷方式，点击“属性”<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227123126.png" srcset="/img/loading.gif"></li>
+<li><p>在电脑桌面鼠标右击，选择<code>Git Bash Here</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226170804.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>在出现的命令行界面中输入<code>git --version</code>，回车可查看安装的版本号，即为安装成功<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227122239.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>[可选]修改Git Bash打开时的默认路径。鼠标右击Git Bash快捷方式，点击“属性”<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227123126.png" srcset="/img/loading.gif"></p>
+</li>
 </ul>
 <ol start="4">
 <li>配置SSH Key</li>
 </ol>
 <ul>
-<li>在电脑桌面鼠标右击，选择<code>Git Bash Here</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226170804.png" srcset="/img/loading.gif"></li>
-<li>在命令行中输入<code>cd ~/.ssh/</code>，回车<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227123451.png" srcset="/img/loading.gif"></li>
-<li>若显示<code>No such file or directory</code>，则创建一个，在命令行中输入<code>mkdir ~/.ssh</code>，回车<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227123606.png" srcset="/img/loading.gif"></li>
-<li>配置全局的name和email，在命令行分别输入<code>git config --global username(你注册GitHub时的用户名)</code> <code>git config --global useremail(你注册GitHub时的邮箱)</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227123806.png" srcset="/img/loading.gif"></li>
-<li>生成SSH Key，在命令行中输入<code>ssh-keygen -t rsa -C useremail(你注册GitHub时的邮箱)</code>，完成后在本地会得到两个文件（命令行中会显示存放在哪里）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227124604.png" srcset="/img/loading.gif"></li>
-<li>在GitHub上添加SSH Key<ul>
+<li><p>在电脑桌面鼠标右击，选择<code>Git Bash Here</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226170804.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>在命令行中输入<code>cd ~/.ssh/</code>，回车<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227123451.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>若显示<code>No such file or directory</code>，则创建一个，在命令行中输入<code>mkdir ~/.ssh</code>，回车<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227123606.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>配置全局的name和email，在命令行分别输入<code>git config --global username(你注册GitHub时的用户名)</code> <code>git config --global useremail(你注册GitHub时的邮箱)</code><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227123806.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>生成SSH Key，在命令行中输入<code>ssh-keygen -t rsa -C useremail(你注册GitHub时的邮箱)</code>，完成后在本地会得到两个文件（命令行中会显示存放在哪里）<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201227124604.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>在GitHub上添加SSH Key</p>
+<ul>
 <li>用记事本打开<code>id_rsa.pub</code>文件，将里面的内容全部复制</li>
 <li>点击GitHub个人头像，点击<code>Settings</code> –&gt; <code>SSH and GPG keys</code> –&gt; <code>New SSh key</code>，将上一步复制的内容全部粘贴<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226194734.png" srcset="/img/loading.gif"><br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226194522.png" srcset="/img/loading.gif"></li>
 <li>查看是否添加成功，在命令行中输入<code>ssh git@github.com</code>，显示如下即为安装成功<br><img src="https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226195013.png" srcset="/img/loading.gif"></li>
@@ -345,8 +359,7 @@
 &diams; 至此，搭建博客的准备工作已经完成。关于Github和Git还有不少可以介绍的地方，日后再通过实践学习，边学边用，记得更牢。
 
 
-<h3 id="更多学习资料"><a href="#更多学习资料" class="headerlink" title="更多学习资料"></a>更多学习资料</h3><hr>
-<ul>
+<h3 id="更多学习资料"><a href="#更多学习资料" class="headerlink" title="更多学习资料"></a>更多学习资料</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://www.githubs.cn/post/git-tutorial">GitHub中文社区汇总的优质Git和GitHub教程</a></li>
 <li><a target="_blank" rel="noopener" href="https://guides.github.com/">GitHub官方指南</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.blog/2018-04-19-introducing-github-learning-lab/">GitHub官方教学</a><!-- ![](https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226175413.png)
@@ -360,7 +373,7 @@
 <!-- ![](https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226185527.png)
 ![](https://cdn.jsdelivr.net/gh/momoknight/blog-images/images/20201226185609.png) -->
 
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>—<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GitHub">https://zh.wikipedia.org/wiki/GitHub</a><br><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages">https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages</a><br><a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></p>
+<h3 id="Referenceshttps-zh-wikipedia-org-wiki-GitHub"><a href="#Referenceshttps-zh-wikipedia-org-wiki-GitHub" class="headerlink" title="Referenceshttps://zh.wikipedia.org/wiki/GitHub"></a>References<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GitHub">https://zh.wikipedia.org/wiki/GitHub</a></h3><p><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages">https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/about-github-pages</a><br><a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></p>
 
             </div>
             <hr>
